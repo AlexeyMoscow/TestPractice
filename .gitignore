@@ -1,1 +1,13 @@
 /.idea/
+/target/test-classes/BaseTest.class
+/target/classes/config.properties
+/target/classes/utils/FileUtils.class
+/test-output/html/index.html
+/target/log/log.log
+/target/classes/pageModels/MainPage.class
+/test-output/html/reportng.css
+/test-output/html/reportng.js
+/test-output/html/suite0_test0_results.html
+/target/test-classes/testCase.class
+/test-output/xml/testCase_results.xml
+/target/classes/testConfig.properties
