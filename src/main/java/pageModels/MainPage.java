@@ -7,11 +7,11 @@ import org.openqa.selenium.By;
 public class MainPage extends Form {
 
     private final By aboutButtonLocator = By.xpath("//a[normalize-space()='ABOUT']");
-
     private final IButton aboutPageButton = getElementFactory().getButton(aboutButtonLocator, "About page button");
+    private static final By mainPageUnique = By.xpath("//div[@id='home_maincap_v7']");
 
     public MainPage(){
-        super(By.xpath("//div[@class='home_page_takeover_link']"),"Main page");
+        super(mainPageUnique,"Main page");
     }
 
     public void openAboutPage(){

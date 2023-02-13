@@ -1,5 +1,6 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageModels.AboutPage;
 import pageModels.MainPage;
 
 import java.util.Properties;
@@ -9,11 +10,16 @@ public class testCase extends BaseTest {
     String baseUrl = properties.getProperty("baseUrl");
 
     MainPage mainPage = new MainPage();
+    AboutPage aboutPage = new AboutPage();
 
     @Test
-    public void firstCase() {
+    public void firstCase() throws InterruptedException {
         browser.goTo(baseUrl);
         Assert.assertTrue(mainPage.isMainPageOpened(), "Main page is not loaded");
+
         mainPage.openAboutPage();
+        Assert.assertTrue(aboutPage.isAboutPage(),"About page is NOT opened");
+        Assert.assertTrue(aboutPage.compareQuantityOfGamers(),"Numbers of players online is not  more than players in game");
+
     }
 }
