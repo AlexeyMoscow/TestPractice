@@ -11,3 +11,4 @@
 /target/test-classes/testCase.class
 /test-output/xml/testCase_results.xml
 /target/classes/testConfig.properties
+/target/classes/pageModels/AboutPage.class

@@ -3,6 +3,7 @@ package pageModels;
 import aquality.selenium.elements.interfaces.ILabel;
 import aquality.selenium.forms.Form;
 import org.openqa.selenium.By;
+import utils.Utils;
 
 public class AboutPage extends Form {
     private static final By aboutPageUniqueElement = By.xpath("//div[@id='about_header_area']");
@@ -21,7 +22,6 @@ public class AboutPage extends Form {
     }
 
     public boolean compareQuantityOfGamers(){
-        int numberOnline = Integer.parseInt(Utils.extractDigits(gamersOnline.getText()));
-        return Integer.parseInt(Utils.extractDigits(gamersOnline.getText())) > Integer.parseInt(Utils.extractDigits(gamersInGame.getText()));
+           return Integer.parseInt(Utils.extractDigits(gamersOnline.getText())) > Integer.parseInt(Utils.extractDigits(gamersInGame.getText()));
     }
 }
