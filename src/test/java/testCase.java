@@ -1,6 +1,8 @@
+import models.Game;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageModels.AboutPage;
+import pageModels.GamePage;
 import pageModels.MainPage;
 import pageModels.TopSellersPage;
 
@@ -13,6 +15,7 @@ public class testCase extends BaseTest {
     MainPage mainPage = new MainPage();
     AboutPage aboutPage = new AboutPage();
     TopSellersPage topSellersPage = new TopSellersPage();
+    GamePage gamePage = new GamePage();
 
     @Test
     public void firstCase() {
@@ -34,6 +37,10 @@ public class testCase extends BaseTest {
         //Step 2
         mainPage.openTopSellersPage();
         Assert.assertTrue(topSellersPage.isTopSellersPageOpened(),"Top sellers page is NOT opened");
-
+        //Step 3
+        Game firstGameInTopList = topSellersPage.getGameInfo();
+        topSellersPage.openTopGameInList();
+        Game gameFromGamePage = gamePage.getGameInfoFromGamePage();
+        Assert.assertEquals(gameFromGamePage, firstGameInTopList);
     }
 }
