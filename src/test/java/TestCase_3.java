@@ -3,15 +3,15 @@ import org.testng.annotations.Test;
 import pageModels.AdvancedSearchPage;
 import pageModels.MainPage;
 import pageModels.MarketPage;
+import utils.Constants;
+import utils.PropertiesProvider;
 
 public class TestCase_3 extends BaseTest{
-
-    private final static String BASE_URL = "https://store.steampowered.com/";
 
     @Test
     public void TestCase3() {
         //Step 1
-        MainPage mainPage = new MainPage(BASE_URL);
+        MainPage mainPage = new MainPage(Constants.BASE_URL);
         Assert.assertTrue(mainPage.isMainPageOpen(), "Main page is NOT opened");
 
         //Step 2
