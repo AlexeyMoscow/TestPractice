@@ -2,5 +2,5 @@ package utils;
 
 public class Constants {
 
-    public static final String BASE_URL = PropertiesProvider.getFromProperties("url");
+    public static final String BASE_URL = PropertiesUtils.getFromProperties("url");
 }

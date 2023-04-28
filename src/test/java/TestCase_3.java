@@ -3,8 +3,9 @@ import org.testng.annotations.Test;
 import pageModels.AdvancedSearchPage;
 import pageModels.MainPage;
 import pageModels.MarketPage;
+import pageModels.SearchResultPage;
 import utils.Constants;
-import utils.PropertiesProvider;
+
 
 public class TestCase_3 extends BaseTest{
 
@@ -26,6 +27,8 @@ public class TestCase_3 extends BaseTest{
 
        //Step 4
         advancedSearchPage.selectSearchParams();
-
+        SearchResultPage searchResultPage = new SearchResultPage();
+        Assert.assertTrue(searchResultPage.compareSearchFilters(),"");
+        int a = 0 ;
     }
 }
