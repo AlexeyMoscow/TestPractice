@@ -1,10 +1,19 @@
-import org.testng.annotations.Test;
-import utils.PropertiesProvider;
+import com.codeborne.selenide.Selenide;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
-public class BaseTest {
-
-    @Test
-    public void testCase1(){
-        System.out.println(PropertiesProvider.getFromProperties("baseUrl"));
+abstract public class BaseTest {
+    public void setUp(){
+        System.setProperty("chromeoptions.args", "--remote-allow-origins=*");
     }
+
+    @BeforeSuite
+    public void init(){
+        setUp();
+    }
+
+   /* @AfterSuite
+    public void tearDown (){
+        Selenide.closeWebDriver();
+    }*/
 }

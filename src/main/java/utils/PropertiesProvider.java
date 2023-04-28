@@ -14,14 +14,14 @@ public class PropertiesProvider {
     }
 
     private static void loadProperties() {
-        try(var inputStream = PropertiesProvider.class.getClassLoader().getResourceAsStream("application.properties")){
+        try (var inputStream = PropertiesProvider.class.getClassLoader().getResourceAsStream("application.properties")) {
             PROPERTIES.load(inputStream);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static String getFromProperties(String propertiesKey){
+    public static String getFromProperties(String propertiesKey) {
         return PROPERTIES.getProperty(propertiesKey);
     }
 }
