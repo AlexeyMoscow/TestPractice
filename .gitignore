@@ -1,1 +1,6 @@
 /.idea/
+/target/classes/application.properties
+/target/test-classes/BaseTest.class
+/target/classes/utils/PropertiesProvider.class
+/target/test-classes/TestCase.class
+/target/classes/pageModels/TestPage.class
